@@ -136,6 +136,13 @@ The frontend has a template editor developer tool to help develop and debug temp
   <li><code class="highlighter-rouge">float</code> will format the output as float.</li>
   <li><code class="highlighter-rouge">strptime(string, format)</code> will parse a string to a datetime based on a <a href="https://docs.python.org/3.4/library/datetime.html#strftime-and-strptime-behavior">format</a>.</li>
   <li><code class="highlighter-rouge">log(value, base)</code> will take the logarithm of the input. When the base is omitted, it defaults to <code class="highlighter-rouge">e</code> - the natural logarithm. Can also be used as a filter.</li>
+  <li><code class="highlighter-rouge">sin(value)</code> will return the sine of the input. Can be used as a filter.</li>
+  <li><code class="highlighter-rouge">cos(value)</code> will return the cosine of the input. Can be used as a filter.</li>
+  <li><code class="highlighter-rouge">tan(value)</code> will return the tangent of the input. Can be used as a filter.</li>
+  <li><code class="highlighter-rouge">sqrt(value)</code> will return the square root of the input. Can be used as a filter.</li>
+  <li><code class="highlighter-rouge">e</code>, the mathematical constant roughly equal to 2.71828.</li>
+  <li><code class="highlighter-rouge">pi</code>, the mathematical constant roughly equal to 3.14159.</li>
+  <li><code class="highlighter-rouge">tau</code>, the mathematical constant, equal to 2pi, or roughly 6.28318.</li>
   <li>Filter <code class="highlighter-rouge">round(x)</code> will convert the input to a number and round it to <code class="highlighter-rouge">x</code> decimals.</li>
   <li>Filter <code class="highlighter-rouge">timestamp_local</code>  will convert an UNIX timestamp to local time/data.</li>
   <li>Filter <code class="highlighter-rouge">timestamp_utc</code> will convert an UNIX timestamp to UTC time/data.</li>
@@ -289,6 +296,10 @@ Closest to an entity: {{ closest(states.zone.school, 'group.children') }}
 {{ float(value_json) * (2**10) }}
 {{ value_json | log }}
 {{ log(1000, 10) }}
+{{ sin(pi / 2) }}
+{{ cos(tau) }}
+{{ tan(pi) }}
+{{ sqrt(e) }}
 
 # Timestamps
 {{ value_json.tst | timestamp_local }}
