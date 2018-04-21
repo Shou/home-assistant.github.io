@@ -47,6 +47,7 @@ sensor:
     mean: 50
     spread: 10
     seed: 999
+    absolute_time: false
 ```
 
 Configuration variables:
@@ -91,4 +92,9 @@ spread:
   required: false
   default: None
   type: float
+absolute_time:
+  description: Whether to simulate from an absolute time (00:00:00, 1970-01-01), or relative to when the sensor was started.
+  required: false
+  default: false
+  type: boolean
 {% endconfiguration %}
